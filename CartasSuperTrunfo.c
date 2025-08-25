@@ -7,9 +7,8 @@ int main() {
 
     //Variáveis
   char Estado[50],Codigo[10],Nome_da_cidade[100];
-  int Pontos_turisticos;
-  float Area,Pib; 
-  long Populacao;
+  int Pontos_turisticos, Populacao;
+  float Area,Pib,Densidade_Populacional,Pib_per_Capita; 
 
     //Carta 1
   strcpy(Estado, "Goiás");
@@ -19,16 +18,20 @@ int main() {
   Area = 729.296; //Em Km²
   Pib = 59.865; //Em bilhões
   Pontos_turisticos = 16;
+  Densidade_Populacional = (float) Populacao / Area; //Em km²
+  Pib_per_Capita = Area / Pib; 
 
     //Exibição carta 1
   printf("Carta 1:\n");
   printf("Estado: %s\n", Estado);
   printf("Cidade: %s\n", Nome_da_cidade);
   printf("Código: %s\n", Codigo);
-  printf("População: %ld\n", Populacao);
+  printf("População: %d\n", Populacao);
   printf("Área: %.3f km²\n", Area);
   printf("Pib: %.3f bilhões\n", Pib);
   printf("Pontos turísticos: %d\n", Pontos_turisticos);
+  printf("Densidade Populacional: %.2f\n", Densidade_Populacional);
+   printf("O Pib per Capita é: R$ %.2f\n", Pib_per_Capita);
 
     //Carta 2
   strcpy(Estado, "Rio Grande do Sul");
@@ -38,17 +41,21 @@ int main() {
   Area = 495.977; //Em km²
   Pib = 76.074; //Em bilhões
   Pontos_turisticos = 18;
+  Densidade_Populacional = (float) Populacao / Area; //Em km²
+  Pib_per_Capita = Area / Pib;
 
     // Exibe carta 2
   printf("Carta 2:\n");
   printf("Estado: %s\n", Estado);
   printf("Cidade: %s\n", Nome_da_cidade);
   printf("Código: %s\n", Codigo);
-  printf("População: %ld\n", Populacao);
+  printf("População: %d\n", Populacao);
   printf("Área: %.3f km²\n", Area);
   printf("PIB: %.3f bilhões\n", Pib);
   printf("Pontos turísticos: %d\n", Pontos_turisticos);
+  printf("Densidade Populacional: %.2f\n", Densidade_Populacional);
+  printf("O Pib per Capita é: R$ %.2f\n", Pib_per_Capita);
 
 return 0;
 
-}    
+}
